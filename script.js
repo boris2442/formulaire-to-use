@@ -5,29 +5,70 @@ const textarea=document.getElementById("textarea");
 const form=document.querySelector("form");
 console.log(nameForm , surname , email  ,  textarea ,  form);
 const spanName=document.querySelector(".spanName");
-const
+const spanSurname=document.querySelector(".spanSurname");
+const  spanTextarea=document.querySelector(".spanTextarea");
 const symbols = /[^a-zA-Z0-9\s]/;
 
 
-nameForm.addEventListener("input",(e) =>{
-const valueName=e.target.value;
-console.log(valueName);
+// nameForm.addEventListener("input",(e) =>{
+// const valueName=e.target.value;
+// console.log(valueName);
 
-if(valueName===""){
-    nameForm.classList.add("error");
-    spanName.textContent="le nom est obligatoire"
-}else if(valueName.length<3 || valueName.length>30){
-    nameForm.classList.add("error");
-    spanName.textContent="le nom doit être entre 3 et 30 caractères";
+// if(valueName===""){
+//     nameForm.classList.add("error");
+//     spanName.textContent="le nom est obligatoire"
+// }else if(valueName.length<3 || valueName.length>30){
+//     nameForm.classList.add("error");
+//     spanName.textContent="le nom doit être entre 3 et 30 caractères";
+// }
+// else if(symbols.test(valueName)){
+//     nameForm.classList.add("error");
+//     spanName.textContent="le nom ne peut contenir des caracteres speciaux";
+// }else{
+//     nameForm.classList.remove("error");
+//     spanName.textContent="";
+// }
+// })
+// surname.addEventListener("input",(e) =>{
+// const valueSurname=e.target.value;
+// console.log(valueSurname);
+
+// if(valueSurname===""){
+//     surname.classList.add("error");
+//     spanSurname.textContent="le nom est obligatoire"
+// }else if(valueSurname.length<3 || valueSurname.length>30){
+//     surname.classList.add("error");
+//     spanSurname.textContent="le nom doit être entre 3 et 30 caractères";
+// }
+// else if(symbols.test(valueSurname)){
+//     surname.classList.add("error");
+//     spanSurname.textContent="le nom ne peut contenir des caracteres speciaux";
+// }else{
+//    surname.classList.remove("error");
+//     spanSurname.textContent="";
+// }
+// })
+textarea.addEventListener("input",(e) =>{
+const valueTextarea=e.target.value;
+console.log(valueTextarea);
+
+if(valueTextarea===""){
+    textarea.classList.add("error");
+    spanTextarea.textContent="le nom est obligatoire"
+}else if(valueTextarea.length<10 || valueTextarea.length>150){
+   textarea.classList.add("error");
+    spanTextarea.textContent="le nom doit être entre 10 et 200 caractères";
 }
-else if(symbols.test(valueName)){
-    nameForm.classList.add("error");
-    spanName.textContent="le nom ne peut contenir des caracteres speciaux";
+else if(symbols.test(valueTextarea)){
+   textarea.classList.add("error");
+    spanTextarea.textContent="le nom ne peut contenir des caracteres speciaux";
 }else{
-    nameForm.classList.remove("error");
-    spanName.textContent="";
+   textarea.classList.remove("error");
+    spanTextarea.textContent="";
 }
 })
+
+
    
    
  
