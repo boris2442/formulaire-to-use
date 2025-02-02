@@ -25,6 +25,7 @@ form{
     
 height: 95%;
 display: flex;
+justify-content: center;
 flex-direction: column;
 gap:10px;
     border-radius: 10px;
